@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage'; 
+import SearchBar from './components/SearchBar'; 
+import TrendingPlayers from './components/TrendingPlayers'; 
+import CompareTab from './components/CompareTab';
+import './HomePage.css';
+import PlayerProfile from './components/PlayerProfile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {}
+        <Route path="/" element={<HomePage />} />
+
+        {}
+        <Route path="/search" element={<SearchBar />} />
+        <Route path="/trending" element={<TrendingPlayers />} />
+        <Route path="/Compare" element={<CompareTab />} />
+        <Route path="/Profle" element={<PlayerProfile />} />
+        
+      </Routes>
+    </Router>
   );
 }
 
