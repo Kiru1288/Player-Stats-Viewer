@@ -17,7 +17,7 @@ const PlayerProfileTab = () => {
         className="border rounded-l px-4 py-2 w-3/4"
       />
       <button
-        onClick={PlayerProfileCompare} // Use the correct function name here
+        onClick={PlayerProfileCompare} 
         className="bg-blue-600 text-white px-4 py-2 rounded-r"
       >
         Profile
